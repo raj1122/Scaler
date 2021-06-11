@@ -76,47 +76,36 @@ Problem Description
 Given a string A. Find the rank of the string amongst its permutations sorted lexicographically.
 Assume that no characters are repeated.
 
-Note: The answer might not fit in an integer, so return your answer % 1000003*/
-
-
+Note: The answer might not fit in an integer, so return your answer % 1000003
+*/
     static void prefsumwithcnt(int[] count, String str) {
-
-
         for (int i = 0; i < str.length(); ++i)
             ++count[str.charAt(i)];
-
         for (int i = 1; i < 256; ++i)
             count[i] += count[i - 1];
     }
-
     static void updatecountwithchar(int[] count, char ch) {
-
         int i;
         for (i = ch; i < 256; ++i)
             --count[i];
     }
-
-
     public int findRank(String A) {
 
         long mod = 1000003;
         int len = A.length();
-        //total factorial
-        long mul = fact(len);
-        //720
         long rank = 1;
 
         int count[] = new int[256];
-
-
         //init array with prefix sum so that we can easily find char smaller than curr chr
         prefsumwithcnt(count, A);
 
         for (int i = 0; i < len; ++i) {
             //mul = (long) (mul/(len - i));
-
             // count number of chars smaller than str[i]
             // fron str[i+1] to str[len-1]
+            //bca
+            //1,2,3
+
             long t = (count[A.charAt(i) - 1] % mod);
             long t1 = (fact(len - i - 1) % mod);
             rank = ((rank % mod) + ((t * t1) % mod)) % mod;

@@ -212,12 +212,11 @@ The radius of bottle i is smaller than bottle j (A[i] < A[j]).
 You can put bottles into each other any number of times. You want to MINIMIZE the number of visible bottles. A bottle is called visible if it is not put into any other bottle.
 
 Find and return the minimum number of visible bottles.
-
+1      2    3
 */
 
     public int bottle(ArrayList<Integer> A) {
-        HashMap<Integer,
-                Integer> mp = new HashMap<Integer,
+        HashMap<Integer, Integer> mp = new HashMap<Integer,
                 Integer>();
         int ans = 0;
         for (int i = 0; i < A.size(); i++) {

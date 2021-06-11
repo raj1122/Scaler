@@ -232,7 +232,6 @@ NOTE: Return the answer modulo 109+7 as the answer can be large.*/
         }
         void addEdge( int src, int dest, int weight)
         {
-
             primData node0 = new primData(dest, weight);
             primData node = new primData(src, weight);
             adj[src].addLast(node0);

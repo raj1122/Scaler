@@ -228,6 +228,7 @@ NOTE: Users are expected to solve this in O(log(N)) time.*/
                 else
                     start = mid + 1;
             } else {
+                //(i.e., 0 1 2 4 5 6 7 might become 7 0 1 2 4 5 6 ).
                 if (B >= midElem && B <= endElem)
                     //if array exist on right side of array
                     start = mid + 1;

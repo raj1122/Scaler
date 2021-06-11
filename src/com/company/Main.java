@@ -2,11 +2,10 @@ package com.company;
 
 import com.company.Apr.*;
 import com.company.Apr.dynamicProg.ExecuteDpMain;
-import com.company.Apr.dynamicProg.dp1.ExecuteDp1;
-import com.company.Apr.dynamicProg.dp2.ExecuteFnDp2;
 import com.company.Feb.*;
+import com.company.Feb.StringAlgo.stringAlgo;
 import com.company.Mar.*;
-import com.company.May.LinkedList;
+import com.company.May.ExecuteMay;
 
 import java.util.*;
 
@@ -55,7 +54,7 @@ public class Main {
 
         HashSet<ArrayList<Integer>> hs=new HashSet<>();
         ArrayList<Integer> al=new ArrayList<>();
-        new Altimetrik().fn(negPos,negPos.length,5,hs,al);
+//        new Altimetrik().fn(negPos,negPos.length,5,hs,al);
 //        new Altimetrik().permutate(al1);
         String s = "qxkpvo  f   w vdg t wqxy ln mbqmtwwbaegx   mskgtlenfnipsl bddjk znhksoewu zwh bd fqecoskmo";
 
@@ -71,22 +70,15 @@ public class Main {
 
 
 
-//        FebClass();
-//        backtrack08fn(al1,arrs,dblArr,a2,al2,a3);
-//        MarchFuncCall(al1,arrs,dblArr,a2,al2,a3,al2);
+        new ExecuteMay().executeFn();
+//        new ExecuteApr().execute();
+//        new ExecuteMar().executeFnMar();
 //        AprfuncCall();
-        MayFuncCall();
+//        MayFuncCall();
     }
 
     private static void MayFuncCall() {
-//        new stringAlgo().solve("1001","0011");
-        new ExecuteDpMain().ExecuteDpMainFn();
-//        new dp4().executefn();
-//        new amazon().executeFn();
-//        new graph3().executeFn();
-//        new graph2().executeFn();
-//        new circleQueue().executeFn();
-//        new graph1().executeFn();
+
     }
 
     private static void FebClass() {
@@ -96,20 +88,9 @@ public class Main {
 
     private static void AprfuncCall() {
 
-        new ExecuteDp1().ExecuteFn();
-
-//        new dp1().executefn();
-//        d2.executefn();
-//        d3.executefn();
-//        d4.executefn();
-
-//        new dp5().executefn();
-
-//        g.executeFn();
-//            new SegmentTree().executeFn();
-//        new SegmentTree2().executeFn();
+        new ExecuteDpMain().ExecuteDpMainFn();
 //        new SegmentExecuteFn().executeFn();
-//        new greedyalgo().executeFn();
+
     }
 
     private static void MarchFuncCall(ArrayList<Integer> al1, int[] arrs, ArrayList<ArrayList<Integer>> dblArr, ArrayList<Integer> a2, ArrayList<String> al2, ArrayList<Integer> a3, ArrayList<String> strings) {

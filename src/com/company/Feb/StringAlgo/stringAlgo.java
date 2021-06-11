@@ -1,4 +1,4 @@
-package com.company.Feb;
+package com.company.Feb.StringAlgo;
 
 
 import java.util.*;
@@ -44,7 +44,22 @@ Note: The answer string has to start with a non empty prefix of string A followe
 
     public String smallestPrefix(String A, String B) {
 
-        return "";
+        int i=0;
+        int j=0;
+        int m=A.length();
+        int n=B.length();
+        String res="";
+        while (i<m && j< n)
+        {
+            if(A.charAt(i)> B.charAt(j))
+            {
+                res=res + A.charAt(i);
+                i++;
+            }
+            break;
+        }
+        res=res+B.charAt(j);
+        return res;
     }
 
     /*Cyclic Permutations
