@@ -14,6 +14,8 @@ public class ExecuteGraph3 {
                         {4, 6, 359},
                         {5, 6, 963}
                 };
-        new EdgeInMst().solve(3,B);
+        int A[]=new int[]{ 1,1,1,1};
+//        new EdgeInMst().solve(3,B);
+        new GoodGraph().solve(A);
     }
 }

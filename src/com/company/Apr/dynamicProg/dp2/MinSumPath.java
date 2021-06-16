@@ -6,11 +6,13 @@ import java.util.*;
 /*Min Sum Path in Matrix
 Problem Description
 
-Given a M x N grid A of integers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Given a M x N grid A of integers, find a path from top left to bottom right
+which minimizes the sum of all numbers along its path.
 
 Return the minimum sum of the path.
 
 NOTE: You can only move either down or right at any point in time.*/
+
 public class MinSumPath {
     public int minPathSum(int[][] A) {
         int row=A.length;

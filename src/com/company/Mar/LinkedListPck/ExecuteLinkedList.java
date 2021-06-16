@@ -6,7 +6,8 @@ public class ExecuteLinkedList {
     {
 
 //        new LinkedListCircular().exeucte();
-        new ReverseLinkedEven().solve();
+//        new ReverseLinkedEven().solve();
+        new ConnectRightPtr().exeuteFn();
         // Build the tree
 
 

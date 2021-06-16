@@ -6,7 +6,7 @@ import java.util.*;
 public class Stack1 {
 
     public void executeFn() {
-        Chk2Bracket("-(a+b+c)", "-a-b-c");
+
     }
 
 
@@ -19,93 +19,6 @@ The task is to compare them and check if they are similar. If they are similar r
 
 NOTE: It may be assumed that there are at most 26 operands from ‘a’ to ‘z’ and every operand appears only once.*/
 
-    public int Chk2Bracket(String A, String B) {
-
-        String strA = SimplifyStr(A);
-        String strB = SimplifyStr(B);
-
-        int[] v = new int[26];
-        for (int i = 0; i < strA.length(); i++) {
-            char ch = strA.charAt(i);
-            if (ch == '+' || ch == '-')
-                continue;
-            else {
-                char ch1 = strA.charAt(i - 1);
-                int t = (ch1 == '+') ? 1 : -1;
-                int chrAscii = ch - 'a';
-                v[chrAscii] += t;
-            }
-        }
-
-
-        for (int i = 0; i < strB.length(); i++) {
-            char ch = strB.charAt(i);
-            if (ch == '+' || ch == '-')
-                continue;
-            else {
-                char ch1 = strB.charAt(i - 1);
-                int t = (ch1 == '+') ? -1 : +1;
-                int chrAscii = ch - 'a';
-                v[chrAscii] += t;
-            }
-        }
-
-        for (int i = 0; i < 26; i++) {
-            if (v[i] != 0)
-                return 0;
-        }
-
-        return 1;
-    }
-
-    private String SimplifyStr(String a) {
-        Stack<Boolean> st = new Stack<>();
-
-        StringBuilder an = new StringBuilder();
-        st.push(true);
-        int i = 0;
-        while (i < a.length()) {
-            char ch = a.charAt(i);
-            if (ch == '+' || ch == '-') {
-                i++;
-                continue;
-            } else if (ch == '(') {
-                boolean top = st.peek();
-                if (getSignBoolean(a, i))
-                    st.push(top);
-                else
-                    st.push(!top);
-            } else if (ch == ')')
-                st.pop();
-            else {
-                boolean top = st.peek();
-                boolean sign = getSignBoolean(a, i);
-                if (top == true) {
-                    String t = (sign == true) ? "+" : "-";
-                    an.append(t + "" + ch);
-
-                } else {
-
-                    String t = (sign == true) ? "-" : "+";
-                    an.append(t + "" + ch);
-
-                }
-            }
-            i++;
-
-        }
-
-
-        return an.toString();
-    }
-
-    public boolean getSignBoolean(String s, int i) {
-        if (i == 0)
-            return true;
-        if (s.charAt(i - 1) == '-')
-            return false;
-        return true;
-    }
 
     /*All Subarrays
 Problem Description

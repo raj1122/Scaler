@@ -70,9 +70,11 @@ public class Main {
 
 
 
-        new ExecuteMay().executeFn();
+//        new amazon().executeFn();
+
+//        new ExecuteMay().executeFn();
 //        new ExecuteApr().execute();
-//        new ExecuteMar().executeFnMar();
+        new ExecuteMar().executeFnMar();
 //        AprfuncCall();
 //        MayFuncCall();
     }

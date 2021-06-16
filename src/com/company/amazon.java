@@ -7,7 +7,7 @@ public class amazon {
 
     public void executeFn()
     {
-        Integer[] arr1 = {7,7,9,9,9,2,7};
+        Integer[] arr1 = {4,2,5,1,6};
         ArrayList<Integer> levelTree = new ArrayList<>();
         Collections.addAll(levelTree, arr1);
 
@@ -52,10 +52,74 @@ public class amazon {
 
 
 
-        int [] arrm = {9,9,7,7,9,2,2,9,7,3,5,7,9,3,5,9,4,5,7,9,3,4,3,5,7,8,7,11,9,7};
-        majority(arrm);
-        System.out.println("hi");
+        int [] arrm = {5,3,2,4,4,1,2};
+//        majority(arrm);
+        disp(levelTree);
 
+    }
+
+    public ArrayList<Integer> disp(ArrayList<Integer> data)
+    {
+        Collections.sort(data, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2)>0?-1:1;
+            }
+        });
+        int len=data.size();
+        int i=0;
+        ArrayList<Integer> A=new ArrayList<>();
+        HashMap<Integer,Integer> hm=new HashMap<>();
+        int sumA=0;
+
+        int sumB=0;
+        for (int j = 0; j < len; j++) {
+            sumB+=data.get(j);
+            if(hm.containsKey(data.get(j)))
+            {
+                hm.put(data.get(j),hm.get(data.get(j))+1);
+
+            }
+            else
+            {
+                hm.put(data.get(j),1);
+            }
+        }
+
+
+
+
+        while(i<len)
+        {
+            int t= data.get(i);
+            int cal=0;
+            if(hm.get(t)>1)
+            {
+                int freq= hm.get(t);
+                for (int j = 0; j < freq; j++) {
+                    A.add(t);
+                }
+                cal=(t*freq);
+                i=i+freq;
+            }
+            else
+            {
+                cal=t;
+                A.add(t);
+                i++;
+            }
+
+            sumA+= cal;
+            sumB-=cal;
+
+            if(sumA>sumB && A.size()<=(len/2))
+            {
+                Collections.sort(A);
+                return A;
+            }
+        }
+
+        return A;
     }
 
     static int cnt = 0;

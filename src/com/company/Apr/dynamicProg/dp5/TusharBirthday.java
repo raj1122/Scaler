@@ -93,11 +93,13 @@ public class TusharBirthday {
         int m=B.length;
 
         int dp[][]=new int[m+1][k+1];
+        //if eating capacity is zero
         for(int i=0;i<=m;i++)
         {
             dp[i][0]=0;
         }
 
+        //if fillling capacity is zero
         for(int i=1;i<=k;i++)
         {
             dp[0][i]=Integer.MAX_VALUE/2;
