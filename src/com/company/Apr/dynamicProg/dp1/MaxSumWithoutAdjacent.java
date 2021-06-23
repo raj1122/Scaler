@@ -77,7 +77,7 @@ public class MaxSumWithoutAdjacent {
         for (int i = 2; i <n ; i++) {
             dp[i]=Math.max(A[i][1],A[i][2]);
             dp[i]+=dp[i-2];
-            dp[1]=Math.max(dp[i],dp[i-1]);
+            dp[i]=Math.max(dp[i],dp[i-1]);
 
         }
 

@@ -58,9 +58,7 @@ The answer can overflow. So, return the answer % (106 + 7).*/
             for (int money = 1; money <=B ; money++) {
                 if(money>=A.get(coin-1))
                 {
-
                     dp[coin][money]=((dp[coin][money-A.get(coin-1)]%mod)  + (dp[coin-1][money]%mod))%mod;
-
                 }
                 else {
                     //take previous coin as current coin is greter than amount
@@ -69,7 +67,6 @@ The answer can overflow. So, return the answer % (106 + 7).*/
             }
         }
         return  (int)(dp[alen][B]%mod);
-
     }
 
     public int coinchange21(ArrayList<Integer> A, int B) {

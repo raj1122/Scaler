@@ -11,6 +11,11 @@ public class executeGraph2 {
         int[] arr2 = { 3, 3, 4, 5};
 
         int[] arr3 = {2,5,3};
+        int C[][]=new int[][]
+                {{1, 5, 6},
+                    {10, 7, 2},
+                    {3, 6, 9}
+                };
 
 
         String s1[] = {"10", "sale", "jan"};
@@ -22,6 +27,8 @@ public class executeGraph2 {
         Collections.addAll(ls2, s2);
 
 //        new DamagedRoads().solve(arr1,arr2);
-        new DamagedRoad2().solve(arr1,arr2);
+//        new DamagedRoad2().solve(arr1,arr2);
+//        new MatrixAbsDiff().solve(3,3,C);
+        distributeCandies.solve();
     }
 }

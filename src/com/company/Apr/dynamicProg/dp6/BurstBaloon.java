@@ -6,7 +6,6 @@ Problem Description
 
 You are given N balloons each with a number of coins associated with them. An array of integers A represents the coins associated with the ith balloon.
 You are asked to burst all the balloons. If the you burst balloon ith you will get A[left] * A[i] * A[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.
-
 Find the maximum coins you can collect by bursting the balloons wisely.
 
 NOTE: You may imagine A[-1] = A[N] = 1. They are not real therefore you can not burst them.

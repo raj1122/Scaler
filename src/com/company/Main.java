@@ -6,6 +6,7 @@ import com.company.Feb.*;
 import com.company.Feb.StringAlgo.stringAlgo;
 import com.company.Mar.*;
 import com.company.May.ExecuteMay;
+import com.company.jan.JanExecute;
 
 import java.util.*;
 
@@ -70,11 +71,12 @@ public class Main {
 
 
 
-//        new amazon().executeFn();
+
+        new JanExecute().janExecuet();
 
 //        new ExecuteMay().executeFn();
 //        new ExecuteApr().execute();
-        new ExecuteMar().executeFnMar();
+//        new ExecuteMar().executeFnMar();
 //        AprfuncCall();
 //        MayFuncCall();
     }
