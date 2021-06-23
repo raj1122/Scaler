@@ -372,7 +372,7 @@ Return you answer modulo 109 + 7.*/
                     profit = (profit % mod + temp.profit % mod) % mod;
                     profit=(profit%mod-tt.profit %mod)%mod;
                 }
-
+ru
             }
         }
 
